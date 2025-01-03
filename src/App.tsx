@@ -1,3 +1,9 @@
-export default function Home() {
-  return <>MY PERSONAL BLOG APPLICATION</>;
+import Header from "@/layout/Header";
+
+export default function App() {
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
