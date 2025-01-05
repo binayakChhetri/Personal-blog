@@ -1,15 +1,8 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { DialogHeader } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Dialog,
-  DialogContent,
-  DialogOverlay,
-  DialogTitle,
-  DialogTrigger,
-} from "@radix-ui/react-dialog";
+import { AddPostDialog } from "@/components/AddPostDialog";
+import { Badge } from "@/UI/badge";
+
+import { Input } from "@/UI/input";
+
 import { Search } from "lucide-react";
 import { useState } from "react";
 
@@ -54,26 +47,7 @@ export default function Header() {
           <Search className="absolute left-2.5 top-3 h-4 w-4 text-gray-500" />
           <Input placeholder="Search posts...." className="pl-8" />
         </div>
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button>Create New Post</Button>
-          </DialogTrigger>
-          <DialogOverlay className="fixed inset-0 bg-black opacity-75" />{" "}
-          <DialogContent className="w-[400px] sm:w-[500px] p-5 rounded-lg bg-white absolute top-[350px] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <DialogHeader className="mb-4 text-left font-semibold">
-              <DialogTitle>Create New Blog Post</DialogTitle>
-            </DialogHeader>
-            <div className="space-y-4  w-400px">
-              <Input placeholder="Post Title" />
-              <Textarea
-                placeholder="Write your post content..."
-                className="h-40"
-              />
-              <Input placeholder="Tags (comma-seprated)" />
-              <Button>Publish Post</Button>
-            </div>
-          </DialogContent>
-        </Dialog>
+        <AddPostDialog />
       </div>
       <div className="flex gap-2 flex-wrap">
         {getAllTags().map((tag) => (
