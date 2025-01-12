@@ -1,10 +1,9 @@
-import { AddPostDialog } from "@/components/AddPostDialog";
-import { Badge } from "@/UI/badge";
-
-import { Input } from "@/UI/input";
-
 import { Search } from "lucide-react";
 import { useState } from "react";
+
+import { AddPostDialog } from "@/components/AddPostDialog";
+import { Badge } from "@/UI/badge";
+import { Input } from "@/UI/input";
 
 let posts = [
   {
