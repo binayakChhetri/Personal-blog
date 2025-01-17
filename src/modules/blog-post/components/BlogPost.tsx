@@ -85,6 +85,7 @@ export const BlogPost = () => {
                   <AvatarImage src={post.author.avatar} className="w-10" />
                   <AvatarFallback>{post.author.name[0]}</AvatarFallback>
                 </Avatar>
+
                 <div>
                   <CardTitle className="text-sm">{post.title}</CardTitle>
                   <div className="text-sm text-gray-500">
